@@ -78,7 +78,7 @@ library_books = [
 ]
 # TODO: Create a function to view all books that are currently available
 def view_books(books):
-    print("Here are the books that are aviable"):
+    print("Here are the books that are Available"):
 
 # Output should include book ID, title, and author
 
