@@ -77,8 +77,12 @@ library_books = [
     }
 ]
 # TODO: Create a function to view all books that are currently available
-def view_books(books):
-    print("Here are the books that are Available"):
+def search_books(book):
+    print("Available Books")
+    for i in book:
+        if book ("available"):
+            print(ID:{book('id')}, title_of_book: {book['title']}, book_author: {book['author']}, book_genre: {book['genre']}")
+
 
 # Output should include book ID, title, and author
 
