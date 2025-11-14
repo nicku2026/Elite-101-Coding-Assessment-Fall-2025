@@ -114,8 +114,31 @@ def search_books(book):
 # -------- Level 5 --------
 # TODO: Convert your data into a Book class with methods like checkout() and return_book()
 # TODO: Add a simple menu that allows the user to choose different options like view, search, checkout, return, etc.
-
-# -------- Optional Advanced Features --------
+def menu():
+    while True: 
+        print("Library Menu:") 
+        print("1 Show booklist")
+        print("2. Search booklist")
+        print("3. Checkout books") 
+        print("4. Return books") 
+        print("5. Show due books") 
+        print("6. Quit") user_input=input("pick a number")
+        if choice == ("1"): 
+            show_books() 
+        elif choice == "2": 
+            show_books() 
+        elif choice == "3": 
+            checkout_book() 
+        elif choice == "4":
+            return_book() 
+        elif choice == "5":
+            overdue_books() 
+        elif choice == "6": 
+            break 
+        else: 
+            print("You got an Error, pick book again.")
+    menu()
+            # -------- Optional Advanced Features --------
 # You can implement these to move into Tier 4:
 # - Add a new book (via input) to the catalog
 # - Sort and display the top 3 most checked-out books
