@@ -103,12 +103,20 @@ def search_genre(term,book_list):
 
 # -------- Level 3 --------
 # TODO: Create a function to checkout a book by ID
+        def checkout_book():
+            id=input ("Enter Book ID")
 # If the book is available:
 #   - Mark it unavailable
 #   - Set the due_date to 2 weeks from today
 #   - Increment the checkouts counter
-# If it is not available:
-#   - Print a message saying it's already checked out
+for book in libary_books:
+    if book.id==id():
+        checkout()
+        return 
+        else 
+         print("It's already checked out.")
+
+#   - Print a message saying 
 
 
 # -------- Level 4 --------
