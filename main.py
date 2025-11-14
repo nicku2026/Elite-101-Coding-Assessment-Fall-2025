@@ -1,3 +1,4 @@
+
 from library_books import library_books
 from datetime import datetime, timedelta
 
@@ -81,7 +82,7 @@ def search_books(book):
     print("Available Books")
     for i in book:
         if book ("available"):
-            print(ID:{book('id')}, title_of_book: {book['title']}, book_author: {book['author']}, book_genre: {book['genre']}")
+            print(f"{book.id:4}  {book.title:28} {book.author}")
 
 
         
@@ -112,7 +113,6 @@ def search_genre(term,book_list):
 for book in libary_books:
     if book.id==id:
         checkout()
-        return 
     else: 
          print("It's already checked out.")
 
@@ -123,11 +123,10 @@ for book in libary_books:
 def return_book():
     id=input("Enter book ID")
     for  book in library_books:
-    if book.id==id:
-        checkout()
+        if book.id==id:
+            checkout()
         return 
-    else: 
-         print("Book ID not found.")
+
 
 # TODO: Create a function to list all overdue books
 def overdue_books ():
@@ -136,7 +135,7 @@ def overdue_books ():
     
 # A book is overdue if its due_date is before today AND it is still checked out
     for book in library_books:
-        If book==overdue():
+        if book==overdue():
             print(f"{book.id} - {book.title} (Due: {book.due_date})")
             book = True
 if not found:
@@ -154,7 +153,8 @@ def menu():
         print("3. Checkout books") 
         print("4. Return books") 
         print("5. Show due books") 
-        print("6. Quit") user_input=input("pick a number")
+        print("6. Quit") 
+        user_input=input("pick a number")
         if choice == ("1"): 
             show_books() 
         elif choice == "2": 
@@ -170,14 +170,4 @@ def menu():
         else: 
             print("You got an Error, pick book again.")
     menu()
-            # -------- Optional Advanced Features --------
-# You can implement these to move into Tier 4:
-# - Add a new book (via input) to the catalog
-# - Sort and display the top 3 most checked-out books
-# - Partial title/author search
-# - Save/load catalog to file (CSV or JSON)
-# - Anything else you want to build on top of the system!
 
-if __name__ == "__main__":
-    # You can use this space to test your functions
-    pass
