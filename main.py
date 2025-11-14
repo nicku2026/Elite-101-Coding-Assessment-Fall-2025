@@ -110,10 +110,10 @@ def search_genre(term,book_list):
 #   - Set the due_date to 2 weeks from today
 #   - Increment the checkouts counter
 for book in libary_books:
-    if book.id==id():
+    if book.id==id:
         checkout()
         return 
-        else 
+    else: 
          print("It's already checked out.")
 
 #   - Print a message saying 
