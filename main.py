@@ -99,45 +99,6 @@ def search_genre(term,book_list):
 # Return a list of matching books
 
 
-# -------- Level 3 --------
-# TODO: Create a function to checkout a book by ID
-        def checkout_book():
-            id=input ("Enter Book ID")
-# If the book is available:
-#   - Mark it unavailable
-#   - Set the due_date to 2 weeks from today
-#   - Increment the checkouts counter
-for book in library_books:
-    if book.id==id:
-        checkout()
-    else: 
-         print("It's already checked out.")
-
- 
-
-# -------- Level 4 --------
-# TODO: Create a function to return a book by ID
-def return_book():
-    id=input("Enter book ID")
-    for  book in library_books:
-        if book.id==id:
-            checkout()
-        return 
-    print("Book ID not found. Please try again.")
-
-
-# TODO: Create a function to list all overdue books
-def overdue_books ():
-    print ("Overdue Books: ")
-    book=False
-    
-# A book is overdue if its due_date is before today AND it is still checked out
-    for book in library_books:
-        if book==overdue():
-            print(f"{book.id} - {book.title} (Due: {book.due_date})")
-            book = True
-if not found:
-    print ("No books")
 
 # -------- Level 5 --------
 # TODO: Convert your data into a Book class with methods like checkout() and return_book()
