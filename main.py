@@ -93,10 +93,11 @@ def search_books(book):
 # TODO: Create a function to search books by author OR genre
 
 def search_genre(term,book_list): 
-    type_function = input("Type an author or genre: ") 
+    book_term = input("Type an author or genre: ") 
     print("The matching books are:")
     for book in library_books:
-        
+        if  book_term in book.author.lower() or term in book.genre.lower():
+            print(f"{book.id}: {book.title} by {book.author} ({book.genre})
 # Search should be case-insensitive
 # Return a list of matching books
 
@@ -126,6 +127,7 @@ def return_book():
         if book.id==id:
             checkout()
         return 
+    print("Book ID not found. Please try again.")
 
 
 # TODO: Create a function to list all overdue books
@@ -140,7 +142,6 @@ def overdue_books ():
             book = True
 if not found:
     print ("No books")
-print ()
 
 # -------- Level 5 --------
 # TODO: Convert your data into a Book class with methods like checkout() and return_book()
