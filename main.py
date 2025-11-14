@@ -1,7 +1,4 @@
-
-from library_books import library_books
-from datetime import datetime, timedelta
-
+ 
 # -------- Level 1 --------
 library_books = [
     {
@@ -97,10 +94,9 @@ def search_genre(term,book_list):
     print("The matching books are:")
     for book in library_books:
         if  book_term in book.author.lower() or term in book.genre.lower():
-            print(f"{book.id}: {book.title} by {book.author} ({book.genre})
+            print(f"{book.id}: {book.title} by {book.author} ({book.genre})")
 # Search should be case-insensitive
 # Return a list of matching books
-
 
 
 # -------- Level 3 --------
@@ -111,7 +107,7 @@ def search_genre(term,book_list):
 #   - Mark it unavailable
 #   - Set the due_date to 2 weeks from today
 #   - Increment the checkouts counter
-for book in libary_books:
+for book in library_books:
     if book.id==id:
         checkout()
     else: 
@@ -171,4 +167,3 @@ def menu():
         else: 
             print("You got an Error, pick book again.")
     menu()
-
