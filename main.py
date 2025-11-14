@@ -84,13 +84,21 @@ def search_books(book):
             print(ID:{book('id')}, title_of_book: {book['title']}, book_author: {book['author']}, book_genre: {book['genre']}")
 
 
+        
 # Output should include book ID, title, and author
 
 
 # -------- Level 2 --------
 # TODO: Create a function to search books by author OR genre
+
+def search_genre(term,book_list): 
+    type_function = input("Type an author or genre: ") 
+    print("The matching books are:")
+    for book in library_books:
+        
 # Search should be case-insensitive
 # Return a list of matching books
+
 
 
 # -------- Level 3 --------
